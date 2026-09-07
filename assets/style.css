@@ -120,7 +120,10 @@ img{max-width:100%;}
 footer{border-top:1px solid var(--line);padding:20px 0 40px;font-size:12px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
 
 /* ---------- flow diagram ---------- */
-.flow{display:flex;align-items:stretch;gap:0;overflow-x:auto;padding-bottom:6px;}
+.flow{display:flex;align-items:stretch;gap:0;overflow-x:auto;padding-bottom:20px;margin-bottom:4px;scrollbar-width:thin;}
+.flow::-webkit-scrollbar{height:6px;}
+.flow::-webkit-scrollbar-thumb{background:var(--line-strong);border-radius:3px;}
+.flow::-webkit-scrollbar-track{background:transparent;}
 .flow.vertical{flex-direction:column;align-items:flex-start;overflow-x:visible;}
 .flownode{
   flex:none;min-width:128px;background:var(--surface);border:1px solid var(--line-strong);
@@ -186,7 +189,7 @@ footer{border-top:1px solid var(--line);padding:20px 0 40px;font-size:12px;color
 .article-body ul, .article-body ol{margin:0 0 18px;padding-left:22px;}
 .article-body li{margin:0 0 8px;}
 .article-body b{color:var(--paper);}
-.article-body .vizcap{font-size:12px;color:var(--muted);margin:-8px 0 20px;}
+.article-body .vizcap{font-size:12px;color:var(--muted);margin:0 0 20px;}
 
 .callout{
   background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--violet);
