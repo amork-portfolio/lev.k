@@ -60,18 +60,8 @@ img{max-width:100%;}
 
 .wrap{max-width:1040px;margin:0 auto;padding:0 28px;}
 .wrap-article{max-width:1040px;margin:0 auto;padding:0 28px;}
-/* Article content — text, diagrams, tables and cards all share one reading column
-   so the page doesn't visually shift width block to block. Only wrap-article (the
-   outer frame) stays wide, matching the header/footer. */
-.article-body p,
-.article-body ul,
-.article-body ol,
-.article-head .summary-block,
-.callout,
-.flow,
-.table-scroll,
-.barchart,
-.modelgrid{max-width:700px;}
+/* Article content uses the full wrap-article column — same width as the
+   header/footer — for text and visualizations alike. No separate narrow cap. */
 
 /* ---------- topbar ---------- */
 .topbar{border-bottom:1px solid var(--line);padding:22px 0 0;}
@@ -234,7 +224,7 @@ table.data-table td:first-child{color:var(--paper);font-weight:600;}
 .table-scroll{overflow-x:auto;margin:0 0 22px;}
 .table-scroll table.data-table{margin:0;}
 
-.summary-card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px 22px;margin:0 0 8px;max-width:700px;}
+.summary-card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px 22px;margin:0 0 8px;}
 .summary-card ul{max-width:none;}
 .summary-card ul{margin:0;padding-left:0;list-style:none;}
 .summary-card li{position:relative;padding-left:20px;margin-bottom:10px;font-size:14px;line-height:1.7;}
