@@ -1,4 +1,4 @@
-// ONBOARD — shared interactive components (flow diagrams, tooltip, model cards, archive filter)
+// ONBOARD — shared interactive components (flow diagrams, tooltip, model cards)
 (function(){
   var tip;
   function ensureTooltip(){
@@ -57,27 +57,6 @@
       card.innerHTML = '<svg class="micon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">' + m.icon + '</svg>' +
         '<h4>' + m.label + '</h4><p>' + m.desc + '</p><span class="mex">' + m.ex + '</span>';
       container.appendChild(card);
-    });
-  };
-
-  // Archive grid filter: toggles pill dim state + swaps hook text by data-auto/data-semi/data-all.
-  window.ONBOARD_initFilter = function(){
-    var buttons = document.querySelectorAll('.filterbtn');
-    var grid = document.getElementById('archiveGrid');
-    if(!buttons.length || !grid) return;
-    buttons.forEach(function(btn){
-      btn.addEventListener('click', function(){
-        var filter = btn.getAttribute('data-filter');
-        buttons.forEach(function(b){ b.setAttribute('aria-pressed', String(b === btn)); });
-        grid.querySelectorAll('.card').forEach(function(card){
-          var hook = card.querySelector('.hook-text');
-          var autoPill = card.querySelector('.pill.auto');
-          var semiPill = card.querySelector('.pill.semi');
-          if(hook && hook.hasAttribute('data-' + filter)) hook.textContent = hook.getAttribute('data-' + filter);
-          if(autoPill) autoPill.classList.toggle('dim', filter === 'semi');
-          if(semiPill) semiPill.classList.toggle('dim', filter === 'auto');
-        });
-      });
     });
   };
 })();

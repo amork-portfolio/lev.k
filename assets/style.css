@@ -50,7 +50,10 @@ body{
   color:var(--paper);
   font-family:'Gothic A1','Malgun Gothic',sans-serif;
   -webkit-font-smoothing:antialiased;
+  --accent:var(--blue);
+  --accent-soft:var(--blue-soft);
 }
+body[data-track="semi"]{--accent:var(--violet);--accent-soft:var(--violet-soft);}
 .mono{font-family:'IBM Plex Mono','SF Mono',monospace;font-variant-numeric:tabular-nums;}
 a{color:inherit;text-decoration:none;}
 img{max-width:100%;}
@@ -72,6 +75,16 @@ img{max-width:100%;}
 .wordmark a{display:inline-flex;align-items:baseline;}
 .wordmark .mono{font-size:13px;font-weight:500;color:var(--muted);margin-left:10px;letter-spacing:0.01em;}
 .tagline{font-size:13px;color:var(--muted);}
+
+/* ---------- track nav (real pages, not a JS filter) ---------- */
+.trackbar{display:flex;gap:8px;padding:16px 0 20px;}
+.tracklink{
+  font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;
+  padding:9px 18px;border-radius:999px;border:1px solid var(--line-strong);color:var(--muted);
+}
+.tracklink[aria-current="page"]{background:var(--paper);color:var(--bg);border-color:var(--paper);}
+.tracklink.t-auto[aria-current="page"]{background:var(--blue);border-color:var(--blue);color:#fff;}
+.tracklink.t-semi[aria-current="page"]{background:var(--violet);border-color:var(--violet);color:#fff;}
 
 .daytabs{display:flex;gap:6px;overflow-x:auto;padding-bottom:14px;}
 .daytab{
@@ -100,15 +113,19 @@ img{max-width:100%;}
 
 .divider{width:100%;height:34px;margin:34px 0 0;display:block;}
 
+/* ---------- track hub cards (combined index) ---------- */
+.trackhero-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:36px 0 40px;}
+@media (max-width:640px){ .trackhero-grid{grid-template-columns:1fr;} }
+.trackhero-card{background:var(--surface);padding:28px 26px;display:flex;flex-direction:column;gap:12px;}
+.trackhero-card .pill{align-self:flex-start;}
+.trackhero-card h3{font-size:19px;font-weight:800;margin:0;text-wrap:balance;}
+.trackhero-card p{font-size:13px;color:var(--muted);margin:0;line-height:1.6;}
+.trackhero-card .cta{align-self:flex-start;margin-top:4px;background:var(--blue);color:#fff;}
+.trackhero-card.semi .cta{background:var(--violet);}
+
 /* ---------- archive grid ---------- */
 .archive{padding:6px 0 40px;}
-.filterbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 18px;flex-wrap:wrap;}
-.filterbar h2{margin:0;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);}
-.filtertabs{display:flex;gap:6px;}
-.filterbtn{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;padding:7px 14px;border-radius:999px;border:1px solid var(--line-strong);background:transparent;color:var(--muted);cursor:pointer;}
-.filterbtn[aria-pressed="true"]{background:var(--paper);color:var(--bg);border-color:var(--paper);}
-.filterbtn[aria-pressed="true"].f-auto{background:var(--blue);border-color:var(--blue);color:#fff;}
-.filterbtn[aria-pressed="true"].f-semi{background:var(--violet);border-color:var(--violet);color:#fff;}
+.archive > h2{margin:0 0 18px;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);}
 
 .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;}
 @media (max-width:680px){ .grid{grid-template-columns:1fr;} }
@@ -118,7 +135,7 @@ img{max-width:100%;}
 .card-top{display:flex;align-items:center;justify-content:space-between;}
 .card-num{font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;color:var(--muted);}
 .status{font-family:'IBM Plex Mono',monospace;font-size:10.5px;font-weight:600;padding:3px 8px;border-radius:999px;}
-.status.live{background:var(--blue-soft);color:var(--blue);}
+.status.live{background:var(--paper);color:var(--bg);}
 .status.draft{border:1px solid var(--line-strong);color:var(--muted);}
 .card-tags{display:flex;gap:6px;}
 .card h3{font-size:16.5px;font-weight:700;line-height:1.4;margin:2px 0 0;text-wrap:balance;}
@@ -158,9 +175,9 @@ footer{border-top:1px solid var(--line);padding:20px 0 40px;font-size:12px;color
 .barname{font-size:12.5px;color:var(--paper);font-weight:500;}
 .bartrack{position:relative;height:24px;background:var(--surface-2);border-radius:4px;overflow:hidden;}
 .barfill{position:absolute;left:0;top:0;bottom:0;background:var(--muted);opacity:0.4;border-radius:0 4px 4px 0;}
-.barfill.lead{background:var(--blue);opacity:1;}
+.barfill.lead{background:var(--accent);opacity:1;}
 .barval{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--muted);text-align:right;font-variant-numeric:tabular-nums;}
-.barrow.lead .barval{color:var(--blue);font-weight:600;}
+.barrow.lead .barval{color:var(--accent);font-weight:600;}
 .barsource{font-size:11px;color:var(--muted);margin-top:8px;}
 
 /* ---------- model cards ---------- */
@@ -178,7 +195,7 @@ footer{border-top:1px solid var(--line);padding:20px 0 40px;font-size:12px;color
 .article-head .backlink{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);display:inline-flex;align-items:center;gap:6px;margin-bottom:22px;}
 .article-head .backlink svg{width:13px;height:13px;}
 .article-head h1{font-size:clamp(24px,4.2vw,34px);font-weight:900;line-height:1.35;letter-spacing:-0.01em;margin:0 0 16px;text-wrap:balance;}
-.summary-block{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--blue);border-radius:8px;padding:16px 18px;font-size:13.5px;color:var(--muted);line-height:1.8;}
+.summary-block{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:16px 18px;font-size:13.5px;color:var(--muted);line-height:1.8;}
 .summary-block b{color:var(--paper);}
 .summary-block .meta{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-bottom:8px;}
 
@@ -199,10 +216,9 @@ footer{border-top:1px solid var(--line);padding:20px 0 40px;font-size:12px;color
 .article-body .vizcap{font-size:12px;color:var(--muted);margin:0 0 20px;}
 
 .callout{
-  background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--violet);
+  background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--accent);
   border-radius:8px;padding:16px 18px;margin:0 0 22px;font-size:14px;line-height:1.75;
 }
-.callout.blue{border-left-color:var(--blue);}
 .callout .cap{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;display:block;}
 
 table.data-table{width:100%;border-collapse:collapse;margin:0 0 22px;font-size:13.5px;}
@@ -217,7 +233,7 @@ table.data-table td:first-child{color:var(--paper);font-weight:600;}
 .summary-card ul{max-width:none;}
 .summary-card ul{margin:0;padding-left:0;list-style:none;}
 .summary-card li{position:relative;padding-left:20px;margin-bottom:10px;font-size:14px;line-height:1.7;}
-.summary-card li:before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:var(--blue);}
+.summary-card li:before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:var(--accent);}
 .summary-card li:last-child{margin-bottom:0;}
 
 .refs{font-size:12.5px;color:var(--muted);line-height:1.9;padding-left:0;list-style:none;}
