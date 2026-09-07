@@ -60,13 +60,18 @@ img{max-width:100%;}
 
 .wrap{max-width:1040px;margin:0 auto;padding:0 28px;}
 .wrap-article{max-width:1040px;margin:0 auto;padding:0 28px;}
-/* Text reads best narrow; tables/diagrams/charts/cards benefit from the full column,
-   so only the running prose is capped — everything else uses the wide wrap-article. */
+/* Article content — text, diagrams, tables and cards all share one reading column
+   so the page doesn't visually shift width block to block. Only wrap-article (the
+   outer frame) stays wide, matching the header/footer. */
 .article-body p,
 .article-body ul,
 .article-body ol,
 .article-head .summary-block,
-.callout{max-width:700px;}
+.callout,
+.flow,
+.table-scroll,
+.barchart,
+.modelgrid{max-width:700px;}
 
 /* ---------- topbar ---------- */
 .topbar{border-bottom:1px solid var(--line);padding:22px 0 0;}
@@ -92,7 +97,7 @@ img{max-width:100%;}
   padding:7px 12px;border-radius:999px;border:1px solid var(--line);color:var(--muted);
   white-space:nowrap;
 }
-.daytab.active{background:var(--paper);color:var(--bg);border-color:var(--paper);font-weight:600;}
+.daytab.active{background:#12141C;color:#fff;border-color:#12141C;font-weight:600;}
 .daytab.done{color:var(--paper);border-color:var(--line-strong);}
 .daytab.soon{opacity:0.45;cursor:default;}
 
