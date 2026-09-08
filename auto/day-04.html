@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day 04 — 내연기관·하이브리드·전기차 · 온보드</title>
+<meta name="description" content="내연기관·하이브리드·전기차는 파워트레인이 물리적으로 어떻게 다를까요. 4행정 사이클부터 회생제동까지 살펴봅니다.">
+<meta property="og:title" content="Day 04 — 내연기관·하이브리드·전기차 · 온보드">
+<meta property="og:description" content="내연기관·하이브리드·전기차의 파워트레인은 물리적으로 어떻게 다를까요.">
+<meta property="og:type" content="article">
+<meta name="theme-color" content="#0B0D12">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body data-track="auto">
+
+<div class="wrap">
+  <header class="topbar">
+    <div class="topbar-row">
+      <div class="wordmark"><a href="../index.html">ONBOARD<span class="mono">온보드</span></a></div>
+      <div class="tagline">자동차 트랙</div>
+    </div>
+    <nav class="trackbar" aria-label="트랙 선택">
+      <a class="tracklink" href="../index.html">전체</a>
+      <a class="tracklink t-auto" href="./index.html" aria-current="page">자동차</a>
+      <a class="tracklink t-semi" href="../semi/index.html">반도체</a>
+    </nav>
+    <div class="daytabs">
+      <a class="daytab done" href="./day-01.html">DAY 01</a>
+      <a class="daytab done" href="./day-02.html">DAY 02</a>
+      <a class="daytab done" href="./day-03.html">DAY 03</a>
+      <a class="daytab done active" href="./day-04.html">DAY 04</a>
+      <a class="daytab done" href="./day-05.html">DAY 05</a>
+    </div>
+  </header>
+</div>
+
+<div class="wrap-article">
+
+  <div class="article-head">
+    <a class="backlink" href="./index.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+      자동차 트랙으로
+    </a>
+    <div class="pill-row"><span class="pill auto">자동차</span></div>
+    <h1>Day 04 — 엔진 속에서 실제로 무슨 일이 일어날까</h1>
+    <div class="summary-block">
+      <div class="meta">작성 기준일 · 2026년 9월 2일</div>
+      <b>핵심 질문</b> — 내연기관·하이브리드·전기차는 파워트레인이 물리적으로 어떻게 다를까?
+    </div>
+  </div>
+
+  <article class="article-body">
+    <p>Day 1-3에서 산업 구조·수익 구조·수주 구조를 봤으니, 오늘은 순수하게 <b>기계적·물리적으로 무슨 일이 벌어지는가</b>에 집중해볼게요.</p>
+
+    <h3>내연기관(ICE): 4행정 사이클</h3>
+    <div class="flow vertical" id="flowICE"></div>
+    <p style="margin-top:22px;">가장 널리 쓰이는 내연기관은 흡입-압축-폭발-배기, 이 네 단계(4행정)가 반복되며 동력을 만듭니다. 피스톤의 상하 왕복운동은 크랭크샤프트를 거쳐 회전운동으로 바뀌어 바퀴까지 전달돼요. 내연기관은 특정 회전수 구간에서만 효율적으로 힘을 내기 때문에, 상황에 맞는 회전수·토크로 바꿔주는 <b>변속기</b>가 반드시 필요합니다.</p>
+
+    <h3>전기차(EV): 배터리·인버터·모터, 그리고 감속기 하나</h3>
+    <div class="flow vertical" id="flowEV"></div>
+    <p style="margin-top:22px;">전기모터는 정지 상태에서도 즉시 최대 토크를 낼 수 있고 넓은 회전수 구간에서 고르게 힘을 내는 특성이 있어서, 내연기관과 달리 여러 단의 변속기가 필요 없고 보통 고정 감속비의 감속기 하나로 충분해요. 이 구조적 단순함이 전기차 파워트레인의 부품 수가 내연기관보다 크게 줄어드는 핵심 이유입니다.</p>
+
+    <h3>하이브리드(HEV): 엔진과 모터를 어떻게 섞는가</h3>
+    <p>하이브리드는 엔진과 모터를 연결하는 방식에 따라 성격이 완전히 달라져요.</p>
+    <div class="table-scroll">
+      <table class="data-table">
+        <thead><tr><th>구조</th><th>방식</th><th>특징</th><th>대표 사례</th></tr></thead>
+        <tbody>
+          <tr><td>직렬(Series)</td><td>엔진은 발전만 담당, 구동은 전적으로 모터가 수행</td><td>구조는 단순하지만 고부하 주행에서 효율이 상대적으로 낮음</td><td>초기 하이브리드 방식</td></tr>
+          <tr><td>병렬(Parallel)</td><td>엔진과 모터 두 축이 함께 바퀴를 구동</td><td>두 동력원이 상황에 따라 구동에 직접 관여</td><td>현대자동차 하이브리드</td></tr>
+          <tr><td>직병렬(Series-Parallel)</td><td>주행 시엔 병렬처럼, 배터리 충전 시엔 직렬처럼 전환</td><td>동력분할기구(PSD)로 엔진 동력을 배분, 통상 2개 모터 사용</td><td>도요타, 혼다, 르노 E-테크</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>직병렬형은 동력분할기구(Power Split Device)가 사실상 변속기 역할을 대신해서, 별도의 다단 변속기 없이도 엔진과 모터의 힘을 상황에 맞게 배분할 수 있어요. 완성차 업체마다 병렬형(현대)이냐 직병렬형(도요타)이냐를 다르게 택한 게 우연이 아니라, 각자 축적한 동력전달 제어 기술의 차이를 반영한다고 볼 수 있습니다.</p>
+
+    <h3>회생제동 — 왜 전기차·하이브리드는 브레이크를 다르게 쓰나</h3>
+    <p>내연기관차는 브레이크를 밟으면 패드와 디스크의 마찰로 운동에너지가 열로 바뀌어 그대로 사라져요. 반면 전기차·하이브리드는 감속할 때 모터를 발전기처럼 거꾸로 작동시켜서, 바퀴의 회전 운동에너지를 전기에너지로 바꿔 배터리에 다시 저장합니다 — 이걸 <b>회생제동</b>이라고 해요. 하이브리드의 핵심 원리를 한 문장으로 요약하면, "전기로 모터를 돌려 힘을 더하는 것"이 아니라 "바퀴로 모터를 거꾸로 돌려 전기를 만들어 저장하는 것"에 더 가깝습니다.</p>
+
+    <h3>자동차 영업 관점에서 읽어야 할 것</h3>
+    <p>파워트레인 구조 차이는 부품 수 자체를 바꿔놓기 때문에, 부품·정비 영업의 기반 자체가 달라져요.</p>
+    <div class="table-scroll">
+      <table class="data-table">
+        <thead><tr><th>확인할 내용</th><th>내연기관 관련 영업</th><th>전기차 관련 영업</th></tr></thead>
+        <tbody>
+          <tr><td>관련 부품</td><td>엔진, 변속기, 배기계, 연료계 등 다수</td><td>배터리, 모터, 인버터, 감속기 등 소수</td></tr>
+          <tr><td>정비·A/S 수요</td><td>엔진오일, 필터, 배기계 등 정기 소모품 많음</td><td>소모품이 상대적으로 적어 정비 매출 구조가 달라짐</td></tr>
+          <tr><td>부품사에 미치는 영향</td><td>기존 엔진·변속기 부품사에 안정적 수요</td><td>엔진·변속기 관련 부품사는 사업 전환 압박</td></tr>
+          <tr><td>딜러·영업 포인트</td><td>연비, 정숙성, 정비 네트워크</td><td>충전 인프라, 항속거리, 총소유비용(TCO)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <span class="cap">현재 이슈로 연결하기</span>
+      <p style="margin:0;">국내 자동차 등록 통계를 인용한 보도에 따르면 2026년 2월 신규 등록 기준으로 전기차(BEV)가 35,766대, 하이브리드(HEV)가 29,112대를 기록하며 전기차가 하이브리드를 처음으로 앞질렀다고 해요. 다만 이건 국내 등록 대수 기준 스냅샷일 뿐이고, 같은 시기 미국 시장에서는 현대차·기아의 하이브리드 판매가 오히려 역대 최다 기록을 갱신했다는 보도도 있습니다. 오늘 배운 파워트레인 구조 차이가 시장·지역별로 왜 다른 속도로 채택되는지는 앞으로 더 깊이 다룰게요.</p>
+    </div>
+
+    <h2>오늘의 요약</h2>
+    <div class="summary-card">
+      <ul>
+        <li>내연기관은 4행정(흡입-압축-폭발-배기)으로 동력을 만들고, 회전수 대역이 좁아 변속기가 필수다.</li>
+        <li>전기차는 모터가 넓은 회전수에서 고르게 힘을 내기 때문에 감속기 하나로 충분해, 파워트레인 부품 수가 크게 줄어든다.</li>
+        <li>하이브리드는 직렬·병렬·직병렬 구조에 따라 엔진과 모터의 역할 분담이 다르며, 완성차 업체마다 채택 방식이 다르다.</li>
+      </ul>
+    </div>
+    <p style="margin-top:22px;">다음 편에서는 글로벌 완성차 3강 구도(도요타·폭스바겐·현대차그룹)를 다뤄보겠습니다.</p>
+
+    <h2>참고 자료</h2>
+    <ul class="refs">
+      <li><a href="https://ko.wikipedia.org/wiki/4%ED%96%89%EC%A0%95_%EA%B8%B0%EA%B4%80">위키백과 — 4행정 기관</a></li>
+      <li><a href="https://zdnet.co.kr/view/?no=20250225163117">ZDNet Korea — 병렬? 직병렬?…하이브리드 구동방식은 어떻게 다를까</a></li>
+      <li><a href="https://www.carguy.kr/news/articleView.html?idxno=49474">카가이 — 병렬, 직병렬 뭐야..복잡한 하이브리드 쉽게 알아보자</a></li>
+      <li><a href="https://ikkujun.com/902">아이꾸준 — 자동차 회생제동 원리 및 장단점</a></li>
+      <li><a href="https://www.sisadays.co.kr/news/493485">환경감시일보 — 한국 전기차 시장의 역사적 전환점</a></li>
+      <li><a href="https://econmingle.com/car/hyundai-kia-us-hybrid-sales-record-august-2026/">econmingle — 현대·기아 하이브리드 신기록</a></li>
+    </ul>
+  </article>
+</div>
+
+<div class="wrap">
+  <footer>
+    <span>자동차 DAY 04 · 온보드</span>
+    <a href="./index.html" class="mono">← 자동차 트랙</a>
+  </footer>
+</div>
+
+<script src="../assets/site.js"></script>
+<script>
+  ONBOARD_buildFlow(document.getElementById('flowICE'), [
+    {label:'흡입', tip:'피스톤 하강 → 실린더 압력↓ → 공기·연료 혼합기 유입'},
+    {label:'압축', tip:'피스톤 상승 → 혼합기를 압축 → 온도·압력 상승'},
+    {label:'폭발', tip:'점화 → 연소가스 팽창 → 피스톤을 밀어내려 동력 발생'},
+    {label:'배기', tip:'피스톤 상승 → 연소가스를 실린더 밖으로 배출'}
+  ], 'auto', {vertical:true});
+
+  ONBOARD_buildFlow(document.getElementById('flowEV'), [
+    {label:'배터리', tip:'직류(DC) 전기 저장'},
+    {label:'인버터', tip:'직류 → 교류(AC) 변환, 모터 회전 속도·방향 제어'},
+    {label:'구동모터', tip:'전기에너지 → 회전운동'},
+    {label:'감속기', tip:'모터 회전수를 바퀴에 맞게 낮춤(통상 1단)'}
+  ], 'auto', {vertical:true});
+</script>
+</body>
+</html>

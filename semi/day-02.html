@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day 02 — 메모리 vs 시스템 반도체 · 온보드</title>
+<meta name="description" content="메모리와 시스템 반도체는 무엇이 다를까요. 제품 분류부터 사업 특성, 영업 관점까지 반도체 두 축을 비교합니다.">
+<meta property="og:title" content="Day 02 — 메모리 vs 시스템 반도체 · 온보드">
+<meta property="og:description" content="메모리와 시스템 반도체의 사업 방식은 왜 다를까요.">
+<meta property="og:type" content="article">
+<meta name="theme-color" content="#0B0D12">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body data-track="semi">
+
+<div class="wrap">
+  <header class="topbar">
+    <div class="topbar-row">
+      <div class="wordmark"><a href="../index.html">ONBOARD<span class="mono">온보드</span></a></div>
+      <div class="tagline">반도체 트랙</div>
+    </div>
+    <nav class="trackbar" aria-label="트랙 선택">
+      <a class="tracklink" href="../index.html">전체</a>
+      <a class="tracklink t-auto" href="../auto/index.html">자동차</a>
+      <a class="tracklink t-semi" href="./index.html" aria-current="page">반도체</a>
+    </nav>
+    <div class="daytabs">
+      <a class="daytab done" href="./day-01.html">DAY 01</a>
+      <a class="daytab done active" href="./day-02.html">DAY 02</a>
+      <a class="daytab done" href="./day-03.html">DAY 03</a>
+      <a class="daytab done" href="./day-04.html">DAY 04</a>
+      <a class="daytab done" href="./day-05.html">DAY 05</a>
+    </div>
+  </header>
+</div>
+
+<div class="wrap-article">
+
+  <div class="article-head">
+    <a class="backlink" href="./index.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+      반도체 트랙으로
+    </a>
+    <div class="pill-row"><span class="pill semi">반도체</span></div>
+    <h1>Day 02 — 메모리와 시스템 반도체는 무엇이 다른가</h1>
+    <div class="summary-block">
+      <div class="meta">작성 기준일 · 2026년 9월 2일</div>
+      <b>핵심 질문</b> — 메모리와 시스템 반도체의 사업 방식은 왜 다를까?
+    </div>
+  </div>
+
+  <article class="article-body">
+    <p>Day 1에서는 반도체 산업의 밸류체인을 살펴봤습니다. 오늘은 그 안에서 기업이 실제로 <b>무엇을 팔아 매출을 만들고, 어떤 비용과 위험을 부담하는지</b> — 그 중에서도 가장 기본적인 구분인 메모리와 시스템 반도체를 짚어보려고 해요.</p>
+
+    <h3>먼저 용어부터 바로잡기</h3>
+    <div class="modelgrid" id="productGrid"></div>
+    <p style="margin-top:22px;">한국에서는 메모리가 아닌 반도체를 편의상 <b>비메모리</b> 또는 <b>시스템 반도체</b>라고 부르기도 합니다. 하지만 두 표현이 국제적으로 완전히 동일한 공식 분류는 아니에요. WSTS는 시장을 메모리, 로직, 마이크로, 아날로그, 개별소자, 광전자, 센서·액추에이터 등으로 나눕니다.</p>
+    <p>'시스템 반도체'는 일반적으로 데이터를 연산·제어·변환하는 반도체를 가리키지만, 어디까지 포함하는지는 자료마다 다를 수 있습니다. 따라서 시장점유율이나 규모를 인용할 때는 해당 자료가 로직만 뜻하는지, 아날로그·센서까지 포함하는지 확인해야 해요.</p>
+    <p>또 하나, TSMC와 같은 파운드리는 반도체의 <b>제품 종류</b>가 아니라 고객의 칩을 생산하는 <b>사업 모델</b>입니다. 메모리·로직은 '무엇을 만드는가', 팹리스·파운드리·IDM은 '누가 어떻게 설계하고 생산하는가'의 구분이에요.</p>
+
+    <h3>메모리 반도체: 정보를 저장한다</h3>
+    <div class="table-scroll">
+      <table class="data-table">
+        <thead><tr><th>제품</th><th>역할</th><th>전원이 꺼졌을 때</th></tr></thead>
+        <tbody>
+          <tr><td>DRAM</td><td>작업 중인 데이터를 빠르게 임시 저장</td><td>데이터가 사라짐</td></tr>
+          <tr><td>NAND Flash</td><td>저장장치에 데이터를 장기간 보관</td><td>데이터가 남음</td></tr>
+          <tr><td>HBM</td><td>여러 DRAM 다이를 적층해 높은 대역폭 제공</td><td>DRAM과 마찬가지로 사라짐</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>DRAM의 기본 저장 셀은 일반적으로 트랜지스터 한 개와 커패시터 한 개로 구성된 <b>1T1C 구조</b>입니다. 커패시터의 전하가 줄어들기 때문에 주기적으로 데이터를 다시 써주는 리프레시가 필요해요.</p>
+    <p>메모리 제품은 JEDEC 등의 표준을 기반으로 인터페이스와 동작 조건을 맞춥니다. 덕분에 같은 규격의 제품끼리 일정 수준의 호환성이 생기지만, 제조사 제품이 아무 검증 없이 완전히 대체되는 것은 아닙니다. 고객은 성능, 전력, 품질, 인증, 패키지와 공급 안정성을 확인해요. HBM처럼 고객 시스템과의 공동 최적화가 중요한 제품은 범용 DRAM보다 맞춤 협업의 비중도 큽니다.</p>
+
+    <h3>시스템 반도체: 연산·제어·변환한다</h3>
+    <p>시스템 반도체 안에는 성격이 다른 제품이 매우 많습니다. CPU·GPU·AP는 명령을 실행하고 대규모 연산을 처리하고, MCU는 자동차와 가전 등에서 특정 장치를 제어하며, 전력관리반도체는 전압과 전류를 변환·관리하고, 이미지센서는 빛을 전기 신호로 바꿉니다.</p>
+    <p>따라서 "비메모리는 모두 고객 맞춤형이며 다품종 소량생산"이라고 말하면 정확하지 않습니다. 스마트폰 AP나 범용 MCU처럼 여러 고객에게 대량 판매되는 표준 제품도 있고, 특정 고객을 위한 ASIC처럼 맞춤 설계되는 제품도 있어요. 제품별로 설계비, 생산량, 교체 가능성과 영업 주기가 크게 다릅니다.</p>
+
+    <h3>사업 특성 비교</h3>
+    <div class="table-scroll">
+      <table class="data-table">
+        <thead><tr><th>구분</th><th>메모리</th><th>시스템 반도체</th></tr></thead>
+        <tbody>
+          <tr><td>주된 기능</td><td>데이터 저장</td><td>연산·제어·신호 변환</td></tr>
+          <tr><td>제품 범위</td><td>DRAM, NAND, NOR, HBM 등</td><td>로직, MCU, 아날로그, 센서 등 매우 다양</td></tr>
+          <tr><td>표준화</td><td>표준 규격과 범용 제품 비중이 비교적 큼</td><td>범용품부터 완전 맞춤형까지 다양</td></tr>
+          <tr><td>핵심 경쟁력</td><td>원가, 미세공정, 수율, 생산능력, 제품 성능</td><td>설계·IP, 소프트웨어, 공정·패키징, 고객 생태계</td></tr>
+          <tr><td>대표 기업</td><td>Samsung Electronics, SK hynix, Micron</td><td>NVIDIA, Qualcomm, AMD, TI, Infineon 등</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>이 표는 전반적인 경향일 뿐 예외가 많습니다. 첨단 HBM은 고객과의 인증·공동개발이 중요하고, 범용 아날로그 반도체는 폭넓은 고객에게 장기간 판매되기도 해요.</p>
+
+    <h3>시장 규모를 읽을 때 주의할 점</h3>
+    <p>WSTS에 따르면 2025년 세계 반도체 시장은 8,000억 달러에 가까운 사상 최대 규모를 기록했고, 메모리와 로직이 성장을 주도했습니다. 시장 수치를 볼 때는 실제 실적인지 전망인지, 출하량 기준인지 매출 기준인지, 메모리 가격 상승이 수량 증가처럼 해석되지는 않았는지, '시스템 반도체'에 어떤 제품군을 포함했는지, 기업 본사 국적 기준인지 생산시설 위치 기준인지를 반드시 확인해야 합니다. 정의가 다른 자료의 숫자를 나란히 비교하면 한국의 점유율이나 특정 국가의 경쟁력을 크게 잘못 해석할 수 있습니다.</p>
+
+    <h3>반도체 영업 관점에서 읽어야 할 것</h3>
+    <p>메모리와 시스템 반도체의 영업은 '표준품 대 맞춤품'만으로 나뉘지 않습니다. 제품과 고객의 구매 과정부터 확인해야 해요.</p>
+    <div class="table-scroll">
+      <table class="data-table">
+        <thead><tr><th>확인할 내용</th><th>메모리 영업</th><th>시스템 반도체 영업</th></tr></thead>
+        <tbody>
+          <tr><td>고객의 핵심 질문</td><td>가격·성능·품질·공급 물량을 맞출 수 있는가</td><td>고객 제품의 기능과 개발 일정을 충족하는가</td></tr>
+          <tr><td>주요 관리 지표</td><td>재고, 가격, 제품 믹스, 생산능력, 인증</td><td>디자인인 단계, 개발 일정, 기술지원, 양산 물량</td></tr>
+          <tr><td>대표적 위험</td><td>공급과잉·가격 하락, 고객 재고조정</td><td>설계 탈락, 고객 제품 출시 지연, 긴 인증 기간</td></tr>
+          <tr><td>매출 전환 조건</td><td>고객 인증과 구매 주문, 안정적 공급</td><td>설계 채택 후 고객 제품이 실제 양산되어야 함</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>기업을 조사할 때는 이 제품이 범용품인지 고객 전용품인지, 고객이 가격·성능·소프트웨어·장기공급 중 무엇을 우선하는지, 제품이 고객의 평가·디자인인·양산 중 어느 단계에 있는지, 최종 수요처는 어디인지, 시장 성장과 실제 수주·공급능력 사이에 어떤 조건이 남아 있는지를 함께 살펴보는 게 유용합니다.</p>
+
+    <h2>오늘의 요약</h2>
+    <div class="summary-card">
+      <ul>
+        <li>메모리·시스템 반도체는 제품 기능의 구분이고, 팹리스·파운드리·IDM은 사업 모델의 구분이다.</li>
+        <li>시스템 반도체에는 범용 대량생산 제품과 고객 맞춤 제품이 모두 존재한다.</li>
+        <li>영업에서는 시장 성장보다 고객 인증, 디자인인, 양산과 실제 구매 주문까지의 전환 과정을 확인해야 한다.</li>
+      </ul>
+    </div>
+    <p style="margin-top:22px;">다음 편에서는 반도체 기업별 사업 모델(팹리스·파운드리·IDM)이 실제 매출과 이익에 어떤 차이를 만드는지 살펴보겠습니다.</p>
+
+    <h2>참고 자료</h2>
+    <ul class="refs">
+      <li><a href="https://www.wsts.org/esraCMS/extension/media/f/WST/7495/WSTS-Q4-Release-2025_-_06-Mar-2026.pdf">WSTS — 2025년 4분기 세계 반도체 시장 발표</a> (2026-03-06)</li>
+      <li><a href="https://www.wsts.org/76/Recent-News-Release">WSTS — Recent News Releases</a> (확인: 2026-09-02)</li>
+      <li><a href="https://www.jedec.org/">JEDEC — Technology Focus Areas and Memory Standards</a> (확인: 2026-09-02)</li>
+      <li><a href="https://www.semiconductors.org/semiconductors-101/how-are-semiconductors-made/">Semiconductor Industry Association — How are Semiconductors Made?</a> (확인: 2026-09-02)</li>
+    </ul>
+  </article>
+</div>
+
+<div class="wrap">
+  <footer>
+    <span>반도체 DAY 02 · 온보드</span>
+    <a href="./index.html" class="mono">← 반도체 트랙</a>
+  </footer>
+</div>
+
+<script src="../assets/site.js"></script>
+<script>
+  ONBOARD_buildModelGrid(document.getElementById('productGrid'), [
+    {cls:'', label:'메모리', desc:'DRAM, NAND Flash, NOR Flash 등', ex:'데이터 저장', icon:'<rect x="4" y="7" width="16" height="10" rx="1.5"/><path d="M8 7V5m4 2V5m4 2V5"/>'},
+    {cls:'semi-m', label:'로직', desc:'CPU, GPU, AP, FPGA 등', ex:'연산·제어', icon:'<rect x="6" y="6" width="12" height="12" rx="1.5"/><path d="M9 6V3M15 6V3M9 21v-3M15 21v-3M6 9H3M6 15H3M21 9h-3M21 15h-3"/>'},
+    {cls:'', label:'마이크로', desc:'MCU, MPU 등', ex:'장치 제어', icon:'<rect x="5" y="5" width="14" height="14" rx="2"/><circle cx="12" cy="12" r="2.5"/>'},
+    {cls:'semi-m', label:'아날로그', desc:'전력관리칩, 신호변환칩 등', ex:'전압·전류 변환', icon:'<path d="M3 12h4l2-7 4 14 2-7h6"/>'},
+    {cls:'', label:'개별소자', desc:'전력반도체, 다이오드 등', ex:'단일 기능 소자', icon:'<path d="M4 12h6l2-4 4 8 2-4h2"/>'},
+    {cls:'semi-m', label:'센서·광전자', desc:'이미지센서, LED 등', ex:'빛·신호 변환', icon:'<circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2.5"/>'}
+  ]);
+</script>
+</body>
+</html>

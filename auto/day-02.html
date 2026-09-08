@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day 02 — 완성차의 수익원 · 온보드</title>
+<meta name="description" content="완성차 업체는 차량 판매를 중심으로 어떻게 수익원을 넓힐까요. 캡티브 파이낸스, A/S, SDV·OTA까지 자동차 수익 구조를 뜯어봅니다.">
+<meta property="og:title" content="Day 02 — 완성차의 수익원 · 온보드">
+<meta property="og:description" content="완성차 업체는 차량 판매를 중심으로 어떻게 수익원을 넓힐까요.">
+<meta property="og:type" content="article">
+<meta name="theme-color" content="#0B0D12">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body data-track="auto">
+
+<div class="wrap">
+  <header class="topbar">
+    <div class="topbar-row">
+      <div class="wordmark"><a href="../index.html">ONBOARD<span class="mono">온보드</span></a></div>
+      <div class="tagline">자동차 트랙</div>
+    </div>
+    <nav class="trackbar" aria-label="트랙 선택">
+      <a class="tracklink" href="../index.html">전체</a>
+      <a class="tracklink t-auto" href="./index.html" aria-current="page">자동차</a>
+      <a class="tracklink t-semi" href="../semi/index.html">반도체</a>
+    </nav>
+    <div class="daytabs">
+      <a class="daytab done" href="./day-01.html">DAY 01</a>
+      <a class="daytab done active" href="./day-02.html">DAY 02</a>
+      <a class="daytab done" href="./day-03.html">DAY 03</a>
+      <a class="daytab done" href="./day-04.html">DAY 04</a>
+      <a class="daytab done" href="./day-05.html">DAY 05</a>
+    </div>
+  </header>
+</div>
+
+<div class="wrap-article">
+
+  <div class="article-head">
+    <a class="backlink" href="./index.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+      자동차 트랙으로
+    </a>
+    <div class="pill-row"><span class="pill auto">자동차</span></div>
+    <h1>Day 02 — 완성차는 차량 판매를 넘어 어떻게 돈을 버는가</h1>
+    <div class="summary-block">
+      <div class="meta">작성 기준일 · 2026년 9월 2일</div>
+      <b>핵심 질문</b> — 완성차 업체는 차량 판매를 중심으로 어떻게 수익원을 넓힐까?
+    </div>
+  </div>
+
+  <article class="article-body">
+    <p>Day 1에서는 자동차 산업의 밸류체인을 살펴봤습니다. 오늘은 그 구조 안에서 완성차 업체가 실제로 <b>무엇을 팔아 매출을 만들고, 어떤 비용과 위험을 부담하는지</b> 알아보려고 해요.</p>
+    <p>먼저 한 가지 주의할 점이 있습니다. 매출이 크다고 이익도 반드시 큰 것은 아니에요. 산업을 볼 때는 '얼마나 팔았는가'뿐 아니라 <b>매출총이익, 영업이익, 자본 투입과 위험</b>을 함께 봐야 합니다.</p>
+
+    <h3>완성차 업체의 수익 지도</h3>
+    <div class="flow vertical" id="flowRevenue"></div>
+    <p class="vizcap">신차 판매가 주된 매출원이고, 나머지 넷은 그 위에서 파생되는 수익원</p>
+
+    <p style="margin-top:22px;">완성차 업체의 중심 사업은 여전히 차량 판매입니다. 현대자동차가 발표한 2025년 연결 매출은 186조 2,545억 원이었고, 세계 판매량은 약 414만 대였습니다. 다만 연결재무제표에는 자동차 제조·판매뿐 아니라 금융 자회사 등 연결대상 회사의 사업도 포함됩니다.</p>
+    <p>여기서 흔히 생기는 오해가 있어요. 공시상 '금융·기타 부문 매출'이 전체의 20%라 해도 이를 모두 "차량과 무관한 매출"로 볼 수는 없습니다. 자동차 금융은 차량 구매와 밀접하게 연결되고, 연결 매출에는 내부거래 제거와 회계상 분류가 반영되기 때문입니다. 또한 매출 비중만으로 어느 부문이 더 많은 이익을 내는지도 알 수 없어요.</p>
+
+    <h3>차량 판매: 대수보다 믹스가 중요하다</h3>
+    <p>완성차의 차량 매출은 단순히 <span class="mono">판매대수 × 동일한 가격</span>으로 결정되지 않습니다. 같은 100만 대를 팔아도 SUV·고급차·상위 트림의 비중이 높으면 평균판매가격이 올라갈 수 있습니다. 반대로 재고를 줄이기 위해 할인과 판매 장려금을 늘리면 매출과 수익성이 압박받을 수 있어요. 업계에서 판매량과 함께 <b>제품 믹스</b>(product mix), <b>평균판매가격</b>(ASP), <b>인센티브</b>를 보는 이유입니다.</p>
+    <p>2025년 현대자동차는 전 세계에서 전년과 비슷한 약 414만 대를 판매했지만 연결 매출은 전년 대비 6.3% 증가했습니다. 이것만으로 원인을 하나로 단정할 수는 없지만, 판매대수 외에도 제품 구성, 가격과 환율 등이 실적에 영향을 준다는 점은 확인할 수 있습니다. 같은 기간 영업이익은 관세 영향 등으로 19.5% 감소했어요. <b>매출 증가와 이익 증가는 서로 다른 문제</b>라는 사례입니다.</p>
+
+    <h3>캡티브 파이낸스: 차를 더 쉽게 사게 만드는 금융</h3>
+    <p><b>캡티브 파이낸스</b>(captive finance)는 완성차 그룹과 연결된 금융회사가 해당 브랜드의 차량 구매·리스·렌트에 금융을 제공하는 사업입니다. 현대자동차그룹의 현대캐피탈, Toyota Financial Services, GM Financial 등이 대표적인 예예요.</p>
+    <p>소비자는 차량 가격 전액보다 월 납입액을 기준으로 구매 여부를 판단하기도 합니다. 이때 금융회사는 할부·리스 상품으로 초기 구매 부담을 낮추고, 차종과 고객 신용도에 맞는 금리·기간·잔존가치를 설계하며, 프로모션 금리로 특정 차종의 판매를 지원하고, 계약에서 발생하는 이자·리스 수익을 얻습니다.</p>
+    <p>하지만 금융 매출을 그대로 고마진 수익으로 보면 안 됩니다. 금융사는 자금을 조달해야 하고 금리, 연체, 신용손실과 중고차 잔존가치 위험을 부담합니다. 제조부문과 금융부문의 매출·영업이익을 같은 잣대로 단순 비교하기 어려운 이유예요.</p>
+
+    <h3>A/S와 부품: 차량이 팔린 뒤에도 수요가 이어진다</h3>
+    <p>차량은 판매 후 여러 해 동안 정비와 부품 교체가 필요합니다. 완성차 그룹은 순정부품 공급, 정비 네트워크, 보증 연장과 차량 관리 서비스를 통해 고객과 관계를 이어갈 수 있어요. 이 사업은 이미 판매된 차량의 수, 평균 운행 기간, 사고·정비 빈도, 전기차 전환 등에 영향을 받습니다. 판매된 차량이 누적될수록 잠재 고객 기반이 커질 수 있지만, 모든 정비 매출이 완성차 본사에 그대로 잡히는 것은 아닙니다.</p>
+
+    <h3>SDV와 OTA: 새로운 수익 기회이지만 자동으로 고수익은 아니다</h3>
+    <p><b>SDV</b>(Software-Defined Vehicle)는 차량 기능과 고객 경험에서 소프트웨어의 역할이 커지는 흐름을 뜻합니다. <b>OTA</b>(Over-the-Air)는 통신망을 통해 차량 소프트웨어를 원격으로 업데이트하는 방식이에요.</p>
+    <div class="flow" id="flowOTA"></div>
+    <p class="vizcap">OTA 업데이트가 전달되는 경로</p>
+    <p style="margin-top:22px;">OTA가 가능하면 서비스센터 방문 없이 오류를 수정하거나 기능을 개선할 수 있고, 판매 후 새로운 디지털 서비스를 제공할 기반도 생깁니다. 현대자동차그룹은 차세대 인포테인먼트 시스템 <b>Pleos Connect</b>를 공개하며 2030년까지 현대차·기아·제네시스 약 2,000만 대에 적용하겠다는 목표를 밝혔습니다.</p>
+    <p>다만 "소프트웨어는 복제비용이 낮으니 구독은 무조건 고마진"이라는 결론은 지나친 단순화입니다. 차량용 소프트웨어에는 개발·검증, 클라우드와 통신망 운영, 보안 업데이트, 고객지원, 앱 생태계 관리 비용이 계속 들어갑니다. 안전과 직결된 기능은 규제와 책임 문제도 큽니다.</p>
+
+    <h3>자동차 영업 관점에서 읽어야 할 것</h3>
+    <p>완성차 영업은 차량 사양을 설명하는 것만으로 끝나지 않습니다. 개인 고객, 법인·렌터카와 딜러 등 고객 유형에 따라 구매 기준이 달라져요.</p>
+    <ol>
+      <li>판매량은 늘었지만 할인과 인센티브도 함께 늘지 않았는가?</li>
+      <li>SUV·고급차·친환경차 등 수익성이 높은 차종의 비중은 어떻게 변했는가?</li>
+      <li>고객에게 차량 가격과 월 납입액 중 어느 기준이 더 중요한가?</li>
+      <li>금융·보증·정비 상품을 결합했을 때 고객의 총소유비용은 어떻게 달라지는가?</li>
+      <li>디지털 기능이 실제 유료 이용과 재구매로 이어지고 있는가?</li>
+    </ol>
+    <p>영업 담당자는 한 대의 판매가격만이 아니라 <b>차량을 보유하는 동안 고객이 부담하는 총소유비용</b>(TCO)과 회사가 얻을 수 있는 생애가치를 함께 이해해야 합니다.</p>
+
+    <h2>오늘의 요약</h2>
+    <div class="summary-card">
+      <ul>
+        <li>완성차 업체의 핵심 수익원은 차량 판매이며, 금융·A/S·디지털 서비스가 구매와 보유 과정에서 추가 기회를 만든다.</li>
+        <li>연결재무제표의 금융부문 매출을 모두 '차량 외 수익'이나 고마진 수익으로 해석하면 안 된다.</li>
+        <li>판매대수뿐 아니라 제품 믹스, 가격, 인센티브와 비용을 봐야 실제 수익성을 이해할 수 있다.</li>
+      </ul>
+    </div>
+    <p style="margin-top:22px;">다음 편에서는 자동차 부품사의 수주와 원가 구조를 살펴보겠습니다.</p>
+
+    <h2>참고 자료</h2>
+    <ul class="refs">
+      <li><a href="https://www.hyundai.com/content/hyundai/worldwide/en/newsroom/detail/0000001116.html.html">Hyundai Motor — 2025 Annual and Q4 Business Results</a> (2026-01-29)</li>
+      <li><a href="https://www.hyundaimotorgroup.com/en/news/hyundai-motor-group-redefines-in-vehicle-experience-with-pleos-connect-next-generation-infotainment-system">Hyundai Motor Group — Pleos Connect Next-Generation Infotainment System</a> (2026-04-30)</li>
+      <li><a href="https://www.hyundaimotorgroup.com/en/news/hyundai-motor-group-launches-pleos-software-brand-unveiling-new-sdv-technologies-and-collaborations">Hyundai Motor Group — Pleos Software Brand and SDV Technologies</a> (2025-03-28)</li>
+    </ul>
+  </article>
+</div>
+
+<div class="wrap">
+  <footer>
+    <span>자동차 DAY 02 · 온보드</span>
+    <a href="./index.html" class="mono">← 자동차 트랙</a>
+  </footer>
+</div>
+
+<script src="../assets/site.js"></script>
+<script>
+  ONBOARD_buildFlow(document.getElementById('flowRevenue'), [
+    {label:'차량 개발·생산', tip:'신차를 기획하고 생산 준비를 마치는 단계'},
+    {label:'신차 판매 — 주된 매출원', tip:'완성차 업체 매출의 중심축'},
+    {label:'할부·리스·렌트 금융', tip:'구매 부담을 낮추고 금융 수익 창출'},
+    {label:'부품·정비·보증', tip:'보유 기간에 반복 수요 발생'},
+    {label:'커넥티드 서비스', tip:'통신·콘텐츠·편의 기능 제공'},
+    {label:'중고차·모빌리티 등', tip:'차량 생애주기의 다른 단계로 확장'}
+  ], 'auto', {vertical:true});
+
+  ONBOARD_buildFlow(document.getElementById('flowOTA'), [
+    {label:'차량 제조사 서버', tip:'업데이트 패키지를 배포하는 시작점'},
+    {label:'차량 통신 장치', tip:'이동통신·와이파이로 데이터를 수신'},
+    {label:'안전한 검증·설치', tip:'무결성을 확인한 뒤 설치를 진행'},
+    {label:'인포테인먼트·제어기 등', tip:'실제 기능이 갱신되는 최종 대상'}
+  ], 'auto');
+</script>
+</body>
+</html>
